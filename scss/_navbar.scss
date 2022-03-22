@@ -1,0 +1,28 @@
+body{
+    background-color:$colorPrimary ;
+    margin: 0;
+}
+
+.navbar{
+    width: 100%;
+    background-color: $colorPrimary;
+    .logoEncabezado{
+            width:auto;
+            height: 70px;  
+            padding: 3px;
+        }
+    .logoEncabezado2{
+            width:auto;
+            height: 50px;  
+            padding: 3px;
+        }
+       
+    }
+
+#navbarNavAltMarkup{
+    a{
+        &:hover{
+            border-bottom: 2px solid $colortitulos;
+            }
+     }     
+}

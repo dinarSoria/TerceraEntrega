@@ -1,0 +1,12 @@
+.boton{
+    font-size: 17px;
+    color: $colortitulos;
+    background-color: $colornav ;
+    border-radius: 10px;
+    border: 1px solid $colorPrimary;
+    text-shadow: 1px $colorPrimary;
+}
+
+.submit{
+    @extend .boton;
+}

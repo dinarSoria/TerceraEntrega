@@ -1,0 +1,79 @@
+
+// bibliografía
+
+@mixin sizes($height, $width, $margin,){
+    height: $height;
+    width: $width;
+    margin-top:$margin;
+}
+
+div .imgbio {
+    @include sizes(70%,70%,40px);
+}
+
+// discografia
+
+div div .portada{
+    @include sizes(70%,100%,20px);
+}
+
+div .table-responsive{
+    @include sizes(100%,60%,20px);
+}
+
+
+// footer
+
+.foot{
+    margin-top: 5%;
+}
+
+div .logofoot{
+    @include sizes(30px,auto,5px);
+}
+
+
+.first{
+    margin-top: 3%;
+
+}
+
+// media queries
+
+@media (max-width: 480px){
+    div .imgbio {
+        @include sizes(100%,100%,20px);
+    }
+
+    div div .portada{
+        @include sizes(20%,100%,0);
+    
+    
+    #carouselExampleSlidesOnly{
+            height: 100vh;
+    }
+
+    .carousel slide{
+        height: 100vh;
+    }
+    div .logofoot{
+        @include sizes(8px,auto,2px);
+    }
+
+    div .table-responsive{
+        @include sizes(80%,40%,20px);
+    }
+}
+}
+
+@media (min-width: 480px) and (max-width:767px){
+    div .imgbio {
+        @include sizes(80%,100%,20px);
+    }
+    div .logofoot{
+        @include sizes(20px,auto,5px);
+    }
+}
+
+
+

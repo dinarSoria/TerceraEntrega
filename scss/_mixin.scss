@@ -1,0 +1,139 @@
+
+@mixin text ($color, $size, $weight, $spacing, $margin){
+    color:$color;
+    font-size: $size;
+    font-weight:$weight;
+    letter-spacing:$spacing; 
+    margin-top:$margin;
+}
+
+div a{
+    @include text($colornav, 15px, bold, 3px, 0);
+}
+
+div p{
+    @include text($colornav, 18px, 0, 3px, 20px);
+    text-align: center;
+}
+
+.container-fluid .row p{
+    @include text($colornav, 18px, 0, 3px, 20px);
+    text-align: center;
+}
+
+div form div .text {
+    @include text($colornav, 18px, 0, 3px, 20px);
+    text-align: center;
+}
+
+div h2 {
+    @include text($colortitulos, 1.2rem, 0, 3px, 10%);
+
+}
+
+div .newsletter{
+    @include text($colortitulos, 30px, 0, 3px, 5%)
+}
+div .mintext {
+    @include text($colornav, 15px, 0, 3px, 10%);
+
+}
+
+.table{
+    @include text($colornav, 15px, 0, 3px, 5%);
+}
+
+.listado{
+     @include text($colortitulos, 18px, 0, 3px, 5%);
+}
+
+div h1{
+    @include text($colortitulos, 8vw, 0, 3px, 0);
+    font-family: 'Bodoni Moda', serif;
+    text-shadow: 8px 8px 8px $colorPrimary;
+    margin-bottom:15%; 
+}
+
+.footertext{
+        @include text($colornav, 12px, 0, 3px, 0);
+        text-align: center;
+    }
+.vidtext{
+        @include text($colortitulos, 20px, 0, 3px, 10%);
+        text-align: center;
+    }
+
+
+
+
+// media queries
+
+@media (max-width: 480px){
+    div .context{
+        @include text($colornav, 12px, 0, 3px, 12px);
+    }
+
+    div .newsletter{
+        text-align: center;
+    }
+
+    div .mintext{
+        @include text($colornav, 10px, 0, 3px, 10%);
+    }
+
+    .table{
+        @include text($colornav, 15px, 0, 3px, 5%);
+    }
+
+    .listado{
+        @include text($colortitulos, 15px, 0, 3px, 5%);
+    }
+
+    // .contenedor{
+    //     display: inline!important;
+    // }
+
+    .vidtext{
+        @include text($colortitulos, 15px, 0, 3px, 10%);
+        text-align: center;
+    }
+    .footertext{
+        @include text($colornav, 8px, 0, 3px, 0);
+        display: flex;
+        justify-content: center!important;
+    }
+    div div p{
+        @include text($colornav, 8px, 0, 3px, 20px);
+        text-align: center;
+}
+
+}
+
+@media (min-width: 480px) and (max-width:767px){
+    div p{
+        @include text($colornav, 15px, 0, 3px, 10px);
+    }     
+    
+    .contenedor{
+        display: inline!important;
+    }
+    .table{
+        @include text($colornav, 15px, 0, 3px, 0);
+    }
+    
+    .listado{
+         @include text($colortitulos, 10px, 0, 3px, 0);
+    }
+
+     .vidtext{
+        @include text($colortitulos, 10px, 0, 3px, 10%);
+         text-align: center;
+    }
+
+    
+
+    
+
+  
+}
+
